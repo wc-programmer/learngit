@@ -1,0 +1,11 @@
+/target/*
+**.log
+.logs/*
+*.iml
+.idea/*
+/target/
+.settings/
+.project
+.classpath
+*.springBeans
+.DS_Store
