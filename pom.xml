@@ -24,27 +24,6 @@
     </properties>
     <dependencyManagement>
         <dependencies>
-            <!--&lt;!&ndash;构建本地springboot应用功能&ndash;&gt;-->
-            <!--<dependency>-->
-                <!--<groupId>org.springframework.boot</groupId>-->
-                <!--<artifactId>spring-boot-starter</artifactId>-->
-            <!--</dependency>-->
-            <!--&lt;!&ndash;构建springboot的web应用功能&ndash;&gt;-->
-            <!--<dependency>-->
-                <!--<groupId>org.springframework.boot</groupId>-->
-                <!--<artifactId>spring-boot-starter-web</artifactId>-->
-            <!--</dependency>-->
-            <!--&lt;!&ndash;springboot整合freemark&ndash;&gt;-->
-            <!--<dependency>-->
-                <!--<groupId>org.springframework.boot</groupId>-->
-                <!--<artifactId>spring-boot-starter-freemarker</artifactId>-->
-            <!--</dependency>-->
-            <!--springboot-jdbc,内置数据库连接池HikariCP-->
-            <!--<dependency>-->
-                <!--<groupId>org.springframework.boot</groupId>-->
-                <!--<artifactId>spring-boot-starter-jdbc</artifactId>-->
-            <!--</dependency>-->
-            <!--spring cloud-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
