@@ -1,0 +1,22 @@
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    #    freemarker模板前缀
+    suffix: .ftl
+    #    模板编码
+    charset: UTF-8
+    #    模板类型
+    content-type: text/html
+    #    是否启用页面缓存
+    cache: false
+    #  静态资源存储位置
+  mvc:
+    static-path-pattern: /static/**
+  datasource:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/wc_item
+      username: root
+      password: root
+server:
+  port: 8080

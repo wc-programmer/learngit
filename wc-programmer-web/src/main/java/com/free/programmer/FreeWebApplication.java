@@ -2,6 +2,7 @@ package com.free.programmer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @Title: FreeWebApplication
@@ -10,8 +11,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @content
  */
 @SpringBootApplication
+@ComponentScan
 public class FreeWebApplication {
     public static void main(String[] args) {
         SpringApplication.run(FreeWebApplication.class);
+        System.err.println("--------------- 启动成功 ---------------");
     }
 }
