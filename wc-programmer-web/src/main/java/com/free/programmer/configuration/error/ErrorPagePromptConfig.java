@@ -28,6 +28,7 @@ public class ErrorPagePromptConfig {
              InputStreamReader resourceAsStreamReader = new InputStreamReader(resourceAsStream, "UTF-8");
              BufferedReader resourceAsReader = new BufferedReader(resourceAsStreamReader);
              BufferedWriter resourceAsWriter = new BufferedWriter(new FileWriter(path.replace("/target/classes", "/src/main/resources")));
+             BufferedWriter resourceAsWriterClassPath = new BufferedWriter(new FileWriter(path));
         ) {
             String saying = null;
             List<String> sayingList = new ArrayList<>();
@@ -38,6 +39,9 @@ public class ErrorPagePromptConfig {
                 resourceAsWriter.write(say);
                 resourceAsWriter.newLine();
                 resourceAsWriter.flush();
+                resourceAsWriterClassPath.write(say);
+                resourceAsWriterClassPath.newLine();
+                resourceAsWriterClassPath.flush();
             }
         } catch (Exception e) {
             e.printStackTrace();

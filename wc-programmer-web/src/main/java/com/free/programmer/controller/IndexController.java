@@ -4,6 +4,7 @@ import com.free.programmer.baseClass.BaseWebResult;
 import com.free.programmer.baseEnums.BaseResultCode;
 import com.free.programmer.configuration.error.ErrorPagePromptConfig;
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,7 +30,7 @@ public class IndexController {
     @RequestMapping("/error/errorPage/{statusCode}")
     public String errorPage(Model model, @PathVariable("statusCode") String statusCode) {
         try (
-                 InputStream resourceAsStream = IndexController.class.getResourceAsStream("/dd.txt");
+                 InputStream resourceAsStream = IndexController.class.getResourceAsStream("/famous-saying.txt");
                  InputStreamReader resourceAsStreamReader = new InputStreamReader(resourceAsStream, "UTF-8");
                  BufferedReader resourceAsReader = new BufferedReader(resourceAsStreamReader);
         ) {
@@ -57,5 +58,11 @@ public class IndexController {
         return new BaseWebResult(BaseResultCode.FAILED,"操作失败");
     }
 
-
+    @RequestMapping("/login/{type}")
+    public String login(@PathVariable(value = "type",required = false) String type){
+        if(StringUtils.isBlank(type) || type.equals("phoneCode")){
+          return "login/login-phone";
+        }
+        return "login/login";
+    }
 }
